@@ -1,0 +1,95 @@
+
+.header{
+    background-image:linear-gradient(to right, rgba($color-primary, 0.8), rgba($color-primary-light, 0.8)), url('../img/intro-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 100%, 39% 92%, 0 100%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 100%, 39% 92%, 0 100%, 0% 75%);
+    position: relative; 
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+          &__logo {
+            height: 3.5rem; 
+                    font-size: 3rem;}
+          
+
+                    &__text-box {
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center; 
+                    
+                                       
+                                    .btn , .btn:link, .btn:visited{
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    padding: 1rem 2rem;
+                                    display: inline-block;
+                                    border-radius: 10rem;
+                                    transition: all .2s;
+                                    position: relative;
+                                    font-size: 1.6rem;
+                                    border: none;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        transform: translateY(-3px);
+                                        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+                                        &:active{
+                                            outline: none;
+                                            transform: translateY(-1px);
+                                            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+
+                                        }
+                                        
+                                             &--white {
+                                                background-color: #fff;
+                                                color: #777; }
+
+
+                                                 &::after {
+                                                    content: "";
+                                                    display: inline-block;
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    border-radius: 10rem;
+                                                    position: absolute;
+                                                    background-color: #fff;
+                                                    top: 0;
+                                                    left: 0px;
+                                                    z-index: -1;
+                                                    transition: all .4s; }
+
+                                                     &:hover::after{
+                                                        transform: scale(2);
+                                                        opacity: 0;
+                                                    }
+                                                     &--animated {
+                                                        animation: moveInBottom .5s ease-out .75s;
+                                                        animation-fill-mode: backwards; }}
+                               
+                                                       } 
+                                                       @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+                                                       only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+                                                       only screen and (min-width: 125em) {
+                                                   background-image: linear-gradient(
+                                                       to right bottom,
+                                                       rgba($color-primary-light, 0.8),
+                                                       rgba($color-primary-dark, 0.8)),
+                                                   url(../img/hero.jpg);
+                                               }
+                                           
+                                               @include respond(phone) {
+                                                   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+                                                   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+                                               }
+                                                       
+                                                        }
